@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zakat Calculator</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <a href = "Main.html" class = "w3-button"> << Back</a>
+        <h1>Zakat Calculator</h1>
+        <hr>
+        <label>Enter your yearly income (RM): </label>
+        <input type = "number" id="yearly_income" placeholder="Yearly income (RM)" step="0.01">
+        <br>
+        <input type = "submit" id="submit" value = "Submit" onclick = "calculateZakat()">
+        <br>
+        <p id = "zakatText"></p>
+        <script>
+            function calculateZakat(){
+                var income = parseFloat(document.getElementById("yearly_income").value);
+                var zakatAmount = income * 0.025;
+                document.getElementById("zakatText").innerHTML = "zakat pendataptan = RM " + zakatAmount.toFixed(2)
+            }
+        </script>
+    </body>
+</html>

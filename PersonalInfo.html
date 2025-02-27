@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project - home</title>
+        <link rel="stylesheet" href = "Main.css">
+        <script src = "Main.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+    <body>
+        <!--Top nav bar-->
+        <div class="w3-top">
+            <div class="top-bar" id="myNavbar">
+                <a href="Main.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> WELCOME</a>
+                    <div class = "dropdown">
+                        <a href="PersonalInfo.html" class="w3-bar-item w3-button" style = "background-color: rgb(54, 54, 97); box-shadow: 0px px black;"><i class="fa fa-home"></i>
+                             HOME <i class="fa fa-sort-desc"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#about">About Me</a>
+                            <a href="#skills">Skills</a>
+                            <a href="#education">Academic background</a>
+                            <a href="#interest">Personal interest</a> 
+                        </div>
+                    </div>  
+                <a href="Tools.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> TOOLS</a>
+                <a href="asset/CV_Tam.pdf" class="w3-bar-item w3-button w3-hide-small" target = "_blank" download><i class="fa fa-download"></i> DOWNLOAD CV</a>
+            </div>
+        </div>
+
+        <!--About section-->
+        <div class="w3-content w3-container w3-padding-64" id="about">
+            <div class = "fadeInUp-animation">
+                <h1 class="w3-center">ABOUT ME</h1>
+                <p class="w3-center"><em>Hello world!</em></p>
+                <p>Hi, I'm Tam Yong Jun, and welcome to my webpage! I am a student currently studying at UTM Johor. As a curious person, I love exploring new things and gaining knowledge.
+                With a few years of experience in the computing field, I believe the skills I've acquired along my journey will benefit me both now and in the future.
+                </p>
+            </div>
+
+            <div class="w3-row fadeInUp-animation">
+              <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>My Photo</b></p><br>
+                <img src="Images/Tam.jpg" class="w3-round personal-img w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+              </div>
+          
+              <!-- Hide this text on small devices -->
+              <div class="w3-col m6 w3-hide-small w3-padding-large fadeInUp-animation">
+                <p><b><i class="fa fa-address-card"></i>    Personal informations</b></p><br>
+                <p>Name: Tam Yong Jun</p>
+                <p>Matric: A23DW0307</p>
+                <p>Program: 2 DDWD Diploma in Computer Science</p>
+                <p>Section: 43</p>
+                <p><a href = "CV.html" target = "_blank" class = "fadeInUp-animation" style = "color:lightgray">Click view CV as HTML</a></p>
+                <p><a href = "asset/CV_Tam.pdf" target = "_blank" class = "fadeInUp-animation" style = "color:lightgray" download>Click to download CV</a></p>
+              </div>
+            </div>
+        </div>
+
+        <!--Skills-->
+        <div class="w3-content w3-padding-64"id="skills">
+            <h1 class = "w3-center">SKILLS</h1>
+            
+            <p class="w3-wide"><i class="fa fa-laptop"></i>Programming</p>  
+            <div class="w3-light-grey progress-bar">
+                <div id = "myBar-90%" class="w3-container w3-padding-small progress-bar-color w3-center progress-bar"></div>
+            </div>
+
+            <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+            <div class="w3-light-grey progress-bar">
+                <div id = "myBar-85%" class="w3-container w3-padding-small progress-bar-color w3-center progress-bar"></div>
+            </div>
+
+            <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+            <div class="w3-light-grey progress-bar">
+                <div id = "myBar-70%" class="w3-container w3-padding-small progress-bar-color w3-center progress-bar"></div>
+            </div>
+
+        </div>
+
+        <!--Education-->
+        <div class="timeline" id = "education">
+            <h1 class="w3-center">EDUCATION</h1>
+            <p>&emsp;</p>
+            <!-- University -->
+            <div class="timeline-item">
+                <div class = "timeline-icon">
+                    <a href = "https://www.utm.my"><img src="Images/utm.png" alt="UTM_image" style = "width: 200px; height:200px"></a>
+                </div>
+                <div class="timeline-content">
+                    <h3>Diploma in Computer Science</h3>
+                    <p class="institution">Universiti Teknologi Malaysia</p>
+                    <ul>
+                        <li>Course duration: 3 years</li>
+                        <li>Example Courses undertaken: Data Structures and Algorithms, OOP, Discrete Mathematics, Operating Systems, Database and etc.</li>
+                    </ul>
+                    <span class="timeline-date">2023 - Present</span>
+                </div>
+            </div>
+
+            <!-- Secondary School -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <a href = "https://paragon.edu.my/"><img src="Images/paragon.jpg" alt="Paragon_image" style = "width: 200px; height:200px"></a>
+                </div>
+                <div class="timeline-content">
+                    <h3>Secondary School</h3>
+                    <p class="institution">Paragon Private and International School</p>
+                    <ul>
+                        <li>Enter Paragon as a private school student</li>
+                        <li>Took SPM at 2023</li>
+                    </ul>
+                    <span class="timeline-date">2018 - 2023</span>
+                </div>
+            </div>
+
+            <!--Primary School-->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <a href = "https://ms.wikipedia.org/wiki/Sekolah_Jenis_Kebangsaan_(C)_Chien_Chi"><img src="Images/chien_chi.jpg" alt="Chien_Chi_image" style = "width: 200px; height:200px"></a>
+                </div>
+                <div class="timeline-content">
+                    <h3>Primary School</h3>
+                    <p class="institution">SJK (C) Chien Chi</p>
+                    <ul>
+                        <li>Took UPSR at 2017</li>
+                    </ul>
+                    <span class="timeline-date">2012 - 2017</span>
+                </div>
+            </div>
+        </div>
+
+        <!--Personal interest-->
+        <div class="w3-content w3-container w3-padding-64" id="interest">
+            <h1 class = "w3-center">PERSONAL INTEREST</h1>
+
+            <div class = "card-flexbox">
+                <div class="card fadeIn-animation">
+                    <img src="Images/steam.jpg" alt="Steam" style="width:100%">
+                    <div class="container">
+                        <h4><b>Gaming</b></h4> 
+                    </div>
+                    <div class="card-body">
+                        <h1>Gaming</h1>
+                        <p class = "card-info">
+                            Enjoy game from various genre such as factory, automation, simulation, strategy and first person shooter.
+                        </p>
+                    </div>    
+                </div>
+    
+                <div class="card fadeIn-animation">
+                    <img src="Images/Programming.jpeg" alt="Programming" style="width:100%">
+                    <div class="container">
+                      <h4><b>Programming</b></h4> 
+                    </div>
+                    <div class="card-body">
+                        <h1>Programming</h1>
+                        <p class = "card-info">
+                            Love the sense of achievement after completing a coding project.
+                        </p>
+                    </div>   
+                </div> 
+            </div>
+        </div>
+
+        <div class = "w3-center">
+            <a href="Tools.html">Go to tools page >>></a>
+        </div>
+        
+        <!--Footer-->
+        <footer class = "w3-container">
+            <h2>Made by Tam Yong Jun</h2>
+            <p style = "color:lightgray">This webpage is created for Web programming individual project</p>
+        </footer>
+    </body> 
+</html>

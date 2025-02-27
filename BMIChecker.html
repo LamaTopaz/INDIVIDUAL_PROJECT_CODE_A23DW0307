@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI Checker</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            .Wasted{
+                background-color:blue;
+                 color:white;
+            }
+            .Normal{
+                background-color:green;
+                color:white;
+            }
+
+            .Overweight{
+                background-color:yellow;
+            }
+
+            .Obese{
+                background-color:orange
+            }
+
+            .Extremely_Obese{
+                background-color:red;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <a href = "Main.html" class = "w3-button"> << Back</a>
+        <h1>BMI Checker</h1>
+        <hr>
+        <p>BMI Chart: </p>
+        <pre><mark class = "Wasted"> Wasted            </mark>  <b>= BMI less than 18.5</b></pre>
+        <pre><mark class = "Normal"> Normal            </mark>  <b>= BMI 18.5 to 24.9</b></pre>
+        <pre><mark class = "Overweight"> Overweight        </mark>  <b>= BMI 25 to 29.9</b></pre>
+        <pre><mark class = "Obese"> Obese             </mark>  <b>= BMI 30 to 39.9</b></pre>
+        <pre><mark class = "Extremely_Obese"> Extremely Obese   </mark>  <b>= BMI 40 and ABOVE</b></pre>
+        <br>
+        <label>Enter height (in CM):</label>
+        <br>
+        <input type = "number" step = "0.1" id = "height" placeholder="Enter">
+        <br>
+        <label>Enter weight (in KG):</label>
+        <br>
+        <input type = "number" step = "0.1" id = "weight" placeholder="Enter">
+        <br>
+        <input type = "button" id = "check" value = "Check" onclick = "calculateBMI()">
+        <br>
+        <p id = "BMIResult"></p>
+
+        <script>
+            function calculateBMI(){
+                let height = parseFloat(document.getElementById("height").value)/100;
+                let weight = parseFloat(document.getElementById("weight").value);
+                var BMI = weight / (height * height);
+                let BMIResult = document.getElementById("BMIResult");
+                BMIResult.innerHTML = "Your BMI is " + BMI.toFixed(2) + "<br>";
+                if(BMI < 18.5){
+                    BMIResult.innerHTML += "<pre>You are <mark class = 'Wasted'>  Wasted  </mark></pre>";
+                }
+                else if (BMI >= 18.5 && BMI < 25){
+                    BMIResult.innerHTML += "<pre>You are <mark class = 'Normal'>  Normal  </mark></pre>";
+                }
+                else if (BMI >= 25 && BMI < 30){
+                    BMIResult.innerHTML += "<pre>You are <mark class = 'Overweight'>  Overweight  </mark></pre>";
+                }
+                else if (BMI >= 30 && BMI < 40){
+                    BMIResult.innerHTML += "<pre>You are <mark class = 'Obese'>  Obese  </mark></pre>";
+                }
+                else{
+                    BMIResult.innerHTML += "<pre>You are <mark class = 'Extremely_Obese'>  Extremely Obese  </mark></pre>";
+                }
+            }
+        </script>
+    </body>
+</html>

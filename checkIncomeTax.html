@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Income Tax Calculator</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script>
+            function checkTax()
+            {
+                let income = parseFloat(document.getElementById("income").value);
+                var tax = 0;
+
+                if(income >= 0 && income < 5000){
+                    tax = 0;
+                }
+                else if(income >= 5000 && income < 10000)
+                    {
+                        tax = income * 0.01;
+                    }
+                else if(income >= 10000 && income < 30000)
+                    {9
+                        tax = income * 0.02;
+                    }
+                else if(income >= 30000 && income < 50000)
+                    {
+                        tax = income * 0.03;
+                    }
+                else if(income >= 50000)
+                    {
+                        tax = income * 0.05;
+                    }
+                else{
+                    document.getElementById("displayText").innerHTML = "Invalid yearly income.";
+                    return;
+                }
+                document.getElementById("displayText").innerHTML = "Your yearly Income RM:" + income.toFixed(2) + "<br>" + "Your Tax:RM" + tax.toFixed(2); 
+            }
+        </script>
+    </head>
+    <body>
+        <a href = "Main.html" class = "w3-button"> << Back</a>
+        <h1>Income Tax Calculator</h1>
+        <hr>
+
+        <label>Yearly Income: </label>
+        <input type="number" id="income" placeholder="income (RM)" step="0.01"> <br>
+        <input type="button" id="check" value="Check" onclick="checkTax()"> <br>
+
+        <p id="displayText"></p>
+    </body>
+</html>

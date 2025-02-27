@@ -1,0 +1,464 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image:linear-gradient(to top right, #191952, #14141a);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    background-color: #262042;
+}
+
+.top-bar{
+    position: fixed;
+    display:flex;
+    width : 100%;
+    height : 40px;
+    border: 1px solid black;
+    background-color: #262042;
+    left:0;
+    top:0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(54, 54, 97);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+.personal-img{
+    height:300px;
+    width:250px;
+    box-shadow: 0px 8px 16px 0px black;
+}
+
+  .dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Section Styling */
+.education-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+.timeline-icon img {
+    width: 30px;
+    height: auto;
+}
+
+.timeline-content {
+    background: #1d1836;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    position: relative;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-content .institution {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.timeline-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.timeline-content li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(192, 192, 192, 0.2);
+    transition: 1s;
+    width: 40%;
+    background-color: #484263;
+    margin: 50px;
+    transition: width 0.5s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img{
+    height:320px;
+}
+
+.card:hover {                                   
+    position:relative;
+    top: -10px;
+    transition: 1s;
+    box-shadow: 0 8px 16px 0 rgba(192, 192, 192, 0.2);
+}
+
+.card-body{
+    width: 100%;
+    height: 100%;
+    top:0;
+    right:-100%;
+    position:absolute;
+    backdrop-filter: blur(5px);
+    color:white;
+    padding: 30px;
+    display:flex;
+    flex-direction: column;
+    transition: 0.8s;
+}
+
+.card:hover .card-body{
+    right : 0;
+}
+
+
+.card-title{
+    text-transform:uppercase;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.card-info{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
+}
+.container {
+    padding: 2px 16px;
+  }
+
+.card-flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.preview{
+    width: 100%;
+    height: 100%;
+    top:0;
+    right:-100%;
+    position:absolute;
+    backdrop-filter: blur(5px);
+    color:white;
+    padding: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.card:hover .preview{
+    right : 0;
+}
+
+.preview-btn{
+    width: 150px;
+    height: 30px;
+    background-color: rgb(53, 52, 52);
+    border-radius: 10px;
+}
+
+.preview-btn:hover{
+    background-color: #c0bdbd;
+}
+
+.progress-bar{
+    border-radius:20px
+}
+
+.progress-bar-color{
+    background-color: rgb(124, 124, 180);
+    color :black;
+}
+
+.welcome-body{
+    background:url(Images/grassland.jpg)no-repeat;
+    background-size:cover;
+    background-position: center;
+    height:1080px;
+    animation-name: backgroundBlur;
+}
+
+.welcome-hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    margin-top: 15%;
+}
+
+.welcome-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0px);
+    animation: backgroundBlur 5s ease-in-out forwards;
+}
+
+.welcome-html{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header-text h2 {
+    color: #fff;
+    font-size: 54px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+.header-text h2 span {color: navy;}
+
+.header-text p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 30px 0 60px;
+    letter-spacing: 1px;
+}
+
+.welcome-btn{
+    width: 200px;
+    height: 50px;
+    background-color:#1d1836;
+    border-radius:10px;
+    font-size:26px;
+}
+
+.welcome-btn:hover{
+    background-color: rgb(47, 47, 88);
+}
+
+#first-welcome {
+    position: relative;
+    overflow: hidden;
+    animation: bounceIn 0.5s ease-in-out forwards;
+}
+
+#first-welcome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: backInLeft 1s ease-in-out
+}
+
+.backInLeft-animation {
+    position: relative;
+    overflow: hidden;
+    animation: backInLeft 1s ease-in-out forwards;
+}
+
+.backInLeft-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: backInLeft 1s ease-in-out;
+}
+
+.backInRight-animation {
+    position: relative;
+    overflow: hidden;
+    animation: backInRight 1s ease-in-out forwards;
+}
+
+.backInRight-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: backInRight 1s ease-in-out;
+}
+
+#welcome.fadeIn-animation {
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+#welcome.fadeIn-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 6s ease-in-out;
+}
+
+.fadeIn-animation {
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+.fadeIn-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#first.fadeIn-animation{
+    animation: fadeIn 1s ease-in-out;
+}
+#second.fadeIn-animation{
+    animation: fadeIn 1.5s ease-in-out;
+}
+#third.fadeIn-animation{
+    animation: fadeIn 2s ease-in-out;
+}
+#fourth.fadeIn-animation{
+    animation: fadeIn 2.5s ease-in-out;
+}
+#fifth.fadeIn-animation{
+    animation: fadeIn 3s ease-in-out;
+}
+
+.fadeInUp-animation {
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.fadeInUp-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.slideInLeft-animation {
+    position: relative;
+    overflow: hidden;
+    animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.slideInLeft-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.slideInDown-animation {
+    position: relative;
+    overflow: hidden;
+    animation: slideInDown 0.1s ease-in-out forwards;
+}
+
+.slideInDown-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: slideInDown 0.1s ease-in-out;
+}
+
+@keyframes backgroundBlur {
+    0% {
+      backdrop-filter: blur(0px);
+    }
+    100% {
+      backdrop-filter: blur(10px);
+    }
+  }
